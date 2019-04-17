@@ -111,7 +111,7 @@ class Measurement(MeasurementBase):
         return fig, ax
 
 
-    def plot_measured_pts(self, , limit_type='exp', ax=None, plot_kwargs={'marker':'o'}):
+    def plot_measured_pts(self, limit_type='exp', ax=None, plot_kwargs={'marker':'o'}):
 
         if ax is None:
             fig, ax = plt.subplots()

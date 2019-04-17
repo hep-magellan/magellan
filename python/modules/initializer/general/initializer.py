@@ -19,11 +19,11 @@ import analysis.analysis as analysis
 import analysis.higgsbounds as hb
 import jupyter_utils.jupyter_utils as jup
 
+import warnings
+warnings.filterwarnings('ignore')
+
 from measurement.autoload import measurement_database
 import magellan.config as magconf
 import glob
-
-import warnings
-warnings.filterwarnings('ignore')
 
 jup.setup_jupyter()
