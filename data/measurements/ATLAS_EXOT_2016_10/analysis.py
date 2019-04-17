@@ -35,10 +35,9 @@ def limit_vs_mA_GammaA_interpolation_function(vars, limit_type='limit_exp'):
 
     if isinstance(vars, pd.DataFrame):
         mA = vars.iloc[:,0]
-        GammaA_div_mA = pd.Series(data=np.zeros(len(mA)))
+        GammaA_div_mA = vars.iloc[:,1]
         values = interpolation_function(mA, GammaA_div_mA)/0.5809
     else:
-        print('maki')
         mA = vars[0]
         GammaA_div_mA = vars[1]
         values = interpolation_function(mA, GammaA_div_mA)/0.5809
