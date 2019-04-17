@@ -1,0 +1,219 @@
+dependent_variables:
+- header: {name: Observed limit, units: fb}
+  qualifiers:
+  - {name: RE, value: P P --> SCALAR X --> HIGGS HIGGS X --> BQ BQBAR BQ BQBAR X}
+  values:
+  - errors: []
+    value: 2409.1098654956104
+  - errors: []
+    value: 4063.7588059631607
+  - errors: []
+    value: 5078.138202234091
+  - errors: []
+    value: 2731.078711133816
+  - errors: []
+    value: 1065.5773353534469
+  - errors: []
+    value: 222.13039470554384
+  - errors: []
+    value: 47.060801567923654
+  - errors: []
+    value: 27.25619826934782
+  - errors: []
+    value: 14.112148972801194
+  - errors: []
+    value: 23.115508701814083
+  - errors: []
+    value: 12.556709354242077
+  - errors: []
+    value: 8.673339125589296
+  - errors: []
+    value: 11.036265978783764
+  - errors: []
+    value: 8.096735262811684
+  - errors: []
+    value: 5.368513120812786
+  - errors: []
+    value: 3.5475267406040714
+  - errors: []
+    value: 4.316892444909375
+  - errors: []
+    value: 2.2322616723677413
+  - errors: []
+    value: 2.3646958736310997
+  - errors: []
+    value: 1.5892501110272923
+  - errors: []
+    value: 1.3023694856694912
+  - errors: []
+    value: 1.2169425464650772
+  - errors: []
+    value: 1.588582957997499
+- header: {name: Expected limit, units: fb}
+  qualifiers:
+  - {name: RE, value: P P --> SCALAR X --> HIGGS HIGGS X --> BQ BQBAR BQ BQBAR X}
+  values:
+  - errors:
+    - asymerror: {minus: -643.605388776077, plus: 1035.5962420870183}
+      label: 1 sigma
+    - asymerror: {minus: -1066.9941549746188, plus: 2583.40003477697}
+      label: 2 sigma
+    value: 2303.158930557434
+  - errors:
+    - asymerror: {minus: -586.8071105648119, plus: 976.7928537254825}
+      label: 1 sigma
+    - asymerror: {minus: -972.8317506179844, plus: 2475.5659899603097}
+      label: 2 sigma
+    value: 2099.9047875936403
+  - errors:
+    - asymerror: {minus: -489.82887591931467, plus: 836.9022748069488}
+      label: 1 sigma
+    - asymerror: {minus: -812.0574449160414, plus: 2127.8513724784016}
+      label: 2 sigma
+    value: 1752.865606305521
+  - errors:
+    - asymerror: {minus: -368.7064247430501, plus: 581.5478050764243}
+      label: 1 sigma
+    - asymerror: {minus: -611.2559138924456, plus: 1416.3776828873952}
+      label: 2 sigma
+    value: 1319.4257066674563
+  - errors:
+    - asymerror: {minus: -343.4935799822308, plus: 540.2808151268514}
+      label: 1 sigma
+    - asymerror: {minus: -569.4570749466822, plus: 1326.5613896801756}
+      label: 2 sigma
+    value: 1229.2008738921004
+  - errors:
+    - asymerror: {minus: -58.826319706916195, plus: 89.6201222091099}
+      label: 1 sigma
+    - asymerror: {minus: -97.52457077046911, plus: 211.76304968201302}
+      label: 2 sigma
+    value: 210.51154317160191
+  - errors:
+    - asymerror: {minus: -20.627100120664224, plus: 31.911009294808935}
+      label: 1 sigma
+    - asymerror: {minus: -34.19641234620294, plus: 76.20798744583985}
+      label: 2 sigma
+    value: 73.8146241204623
+  - errors:
+    - asymerror: {minus: -10.933255895054593, plus: 17.079663478444843}
+      label: 1 sigma
+    - asymerror: {minus: -18.12557871376646, plus: 41.07257479795414}
+      label: 2 sigma
+    value: 39.12494580359344
+  - errors:
+    - asymerror: {minus: -6.479994526511231, plus: 10.348912828428627}
+      label: 1 sigma
+    - asymerror: {minus: -10.742788057140658, plus: 25.299664781751314}
+      label: 2 sigma
+    value: 23.188832045174426
+  - errors:
+    - asymerror: {minus: -4.881445984396899, plus: 7.931165340380531}
+      label: 1 sigma
+    - asymerror: {minus: -8.092651839165917, plus: 19.658066845243297}
+      label: 2 sigma
+    value: 17.468383747341512
+  - errors:
+    - asymerror: {minus: -3.6063934128250885, plus: 5.9222174325588455}
+      label: 1 sigma
+    - asymerror: {minus: -5.978819878032644, plus: 14.775970691230242}
+      label: 2 sigma
+    value: 12.905574348355028
+  - errors:
+    - asymerror: {minus: -2.8065591314081706, plus: 4.604912527754095}
+      label: 1 sigma
+    - asymerror: {minus: -4.6528233619949315, plus: 11.421498517570273}
+      label: 2 sigma
+    value: 10.043346187533524
+  - errors:
+    - asymerror: {minus: -2.0756384264169627, plus: 3.4963784183146878}
+      label: 1 sigma
+    - asymerror: {minus: -3.4410744649593834, plus: 8.775003006698679}
+      label: 2 sigma
+    value: 7.4277270852274455
+  - errors:
+    - asymerror: {minus: -1.7525298555339681, plus: 3.0014785332778384}
+      label: 1 sigma
+    - asymerror: {minus: -2.905412454406664, plus: 7.551161310644412}
+      label: 2 sigma
+    value: 6.271474506323493
+  - errors:
+    - asymerror: {minus: -1.4425804038477938, plus: 2.53932102576396}
+      label: 1 sigma
+    - asymerror: {minus: -2.39156614569933, plus: 6.4467652958005015}
+      label: 2 sigma
+    value: 5.162312184003724
+  - errors:
+    - asymerror: {minus: -1.1688427274778737, plus: 2.1278370350683655}
+      label: 1 sigma
+    - asymerror: {minus: -1.937753132668984, plus: 5.471153042284472}
+      label: 2 sigma
+    value: 4.182734658774562
+  - errors:
+    - asymerror: {minus: -0.9419441714422061, plus: 1.6598859958334002}
+      label: 1 sigma
+    - asymerror: {minus: -1.5615918430274682, plus: 4.197216628931962}
+      label: 2 sigma
+    value: 3.370772166263562
+  - errors:
+    - asymerror: {minus: -0.7522034325079305, plus: 1.301713689940999}
+      label: 1 sigma
+    - asymerror: {minus: -1.2470322340900197, plus: 3.292355098478775}
+      label: 2 sigma
+    value: 2.691779906428576
+  - errors:
+    - asymerror: {minus: -0.6406274442866258, plus: 1.1073554640078775}
+      label: 1 sigma
+    - asymerror: {minus: -1.0620572022711527, plus: 2.814642856294161}
+      label: 2 sigma
+    value: 2.2925022773267534
+  - errors:
+    - asymerror: {minus: -0.5943317969649247, plus: 1.0337320797401386}
+      label: 1 sigma
+    - asymerror: {minus: -0.9853064696724743, plus: 2.6536905733867604}
+      label: 2 sigma
+    value: 2.126832077178677
+  - errors:
+    - asymerror: {minus: -0.5954622501787339, plus: 1.033618970732939}
+      label: 1 sigma
+    - asymerror: {minus: -0.9871805791697552, plus: 2.6325217746675413}
+      label: 2 sigma
+    value: 2.1308774339459857
+  - errors:
+    - asymerror: {minus: -0.5801231915412124, plus: 1.001610264089548}
+      label: 1 sigma
+    - asymerror: {minus: -0.9617508885635717, plus: 2.5304226908797096}
+      label: 2 sigma
+    value: 2.0759862063343997
+  - errors:
+    - asymerror: {minus: -0.5793590414628642, plus: 1.0039273001534963}
+      label: 1 sigma
+    - asymerror: {minus: -0.9604840507133299, plus: 2.5460362592269266}
+      label: 2 sigma
+    value: 2.073251675039407
+independent_variables:
+- header: {name: Mass of scalar, units: GEV}
+  values:
+  - {value: 260.0}
+  - {value: 270.0}
+  - {value: 280.0}
+  - {value: 290.0}
+  - {value: 300.0}
+  - {value: 400.0}
+  - {value: 500.0}
+  - {value: 600.0}
+  - {value: 700.0}
+  - {value: 800.0}
+  - {value: 900.0}
+  - {value: 1000.0}
+  - {value: 1100.0}
+  - {value: 1200.0}
+  - {value: 1300.0}
+  - {value: 1400.0}
+  - {value: 1600.0}
+  - {value: 1800.0}
+  - {value: 2000.0}
+  - {value: 2250.0}
+  - {value: 2500.0}
+  - {value: 2750.0}
+  - {value: 3000.0}

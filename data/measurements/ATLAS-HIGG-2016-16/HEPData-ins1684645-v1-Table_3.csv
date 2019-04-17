@@ -1,0 +1,45 @@
+#: table_doi: 10.17182/hepdata.83539.v1/t3
+#: name: Table 3
+#: description: Observed and expected limits at 95% CL on the cross-sections of hMSSM scalar X to HH process
+#: data_file: limit_narrow_width_scalar.yaml
+#: keyword reactions: P P --> G x (G-->HH)
+#: keyword observables: CLS
+#: keyword cmenergies: 13000
+#: LUMINOSITY [fb$^{-1}$],36.1
+#: Limit,Observed
+#: SQRT(S) [GeV],13000
+'Mass [GeV]','Cross section upper limit at 95% CL [fb]'
+260,110
+275,157
+300,204
+325,145
+350,73.0
+400,39.7
+450,29.2
+500,26.5
+550,7.52
+600,9.07
+700,10.1
+800,9.67
+900,5.88
+1000,9.9
+
+#: LUMINOSITY [fb$^{-1}$],36.1
+#: Limit,Expected
+#: SQRT(S) [GeV],13000
+'Mass [GeV]','Cross section upper limit at 95% CL [fb]','1 sigma +','1 sigma -','2 sigma +','2 sigma -'
+260,189,74,-53,163,-87
+275,210,82,-59,182,-97
+300,176,69,-49,152,-81
+325,115,45,-32,100,-53
+350,95.1,37.3,-26.6,82.3,-44.1
+400,44.5,17.4,-12.4,38.5,-20.6
+450,24.8,9.7,-6.9,21.5,-11.5
+500,17.5,6.8,-4.9,15.1,-8.1
+550,12.8,5.0,-3.6,11.1,-5.9
+600,11.7,4.6,-3.3,10.1,-5.4
+700,9.42,3.69,-2.63,8.15,-4.37
+800,8.09,3.16,-2.26,7,-3.75
+900,7.44,2.91,-2.08,6.43,-3.45
+1000,7.69,3.01,-2.15,6.65,-3.56
+

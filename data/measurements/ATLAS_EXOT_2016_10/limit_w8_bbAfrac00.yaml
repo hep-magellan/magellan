@@ -1,0 +1,216 @@
+dependent_variables:
+- header: {name: Cross section upper limit at 95% CL, units: pb}
+  qualifiers:
+  - {name: Limit, value: Observed}
+  - {name: SQRT(S), units: GeV, value: 13000}
+  - {name: LUMINOSITY, units: 'fb$^{-1}$', value: 36.1}
+  values:
+  - {value: 0.358795}
+  - {value: 0.629121}
+  - {value: 0.766371}
+  - {value: 0.609699}
+  - {value: 0.478661}
+  - {value: 0.50564}
+  - {value: 0.334524}
+  - {value: 0.380114}
+  - {value: 0.48054}
+  - {value: 0.501997}
+  - {value: 0.477609}
+  - {value: 0.39239}
+  - {value: 0.276396}
+  - {value: 0.198585}
+  - {value: 0.159244}
+  - {value: 0.0619574}
+  - {value: 0.0271859}
+  - {value: 0.0220538}
+  - {value: 0.0184571}
+  - {value: 0.0153629}
+  - {value: 0.0120269}
+  - {value: 0.0126332}
+  - {value: 0.01337}
+  - {value: 0.0131756}
+  - {value: 0.0104747}
+- header: {name: Cross section upper limit at 95% CL, units: pb}
+  qualifiers:
+  - {name: Limit, value: Expected}
+  - {name: SQRT(S), units: GeV, value: 13000}
+  - {name: LUMINOSITY, units: 'fb$^{-1}$', value: 36.1}
+  values:
+  - errors:
+    - asymerror: {minus: -0.166329, plus: 0.233153}
+      label: 1 sigma
+    - asymerror: {minus: -0.275748, plus: 0.515275}
+      label: 2 sigma
+    value: 0.595215
+  - errors:
+    - asymerror: {minus: -0.293792, plus: 0.41183}
+      label: 1 sigma
+    - asymerror: {minus: -0.487061, plus: 0.91015}
+      label: 2 sigma
+    value: 1.05135
+  - errors:
+    - asymerror: {minus: -0.338384, plus: 0.47433}
+      label: 1 sigma
+    - asymerror: {minus: -0.560987, plus: 1.04828}
+      label: 2 sigma
+    value: 1.21092
+  - errors:
+    - asymerror: {minus: -0.30142, plus: 0.42251}
+      label: 1 sigma
+    - asymerror: {minus: -0.499706, plus: 0.93376}
+      label: 2 sigma
+    value: 1.07864
+  - errors:
+    - asymerror: {minus: -0.231877, plus: 0.32503}
+      label: 1 sigma
+    - asymerror: {minus: -0.384415, plus: 0.71833}
+      label: 2 sigma
+    value: 0.82978
+  - errors:
+    - asymerror: {minus: -0.1805, plus: 0.253016}
+      label: 1 sigma
+    - asymerror: {minus: -0.299241, plus: 0.559174}
+      label: 2 sigma
+    value: 0.645926
+  - errors:
+    - asymerror: {minus: -0.140384, plus: 0.196782}
+      label: 1 sigma
+    - asymerror: {minus: -0.232733, plus: 0.434891}
+      label: 2 sigma
+    value: 0.502366
+  - errors:
+    - asymerror: {minus: -0.113266, plus: 0.158771}
+      label: 1 sigma
+    - asymerror: {minus: -0.187777, plus: 0.350886}
+      label: 2 sigma
+    value: 0.405326
+  - errors:
+    - asymerror: {minus: -0.087243, plus: 0.122294}
+      label: 1 sigma
+    - asymerror: {minus: -0.144636, plus: 0.270272}
+      label: 2 sigma
+    value: 0.312204
+  - errors:
+    - asymerror: {minus: -0.069749, plus: 0.097772}
+      label: 1 sigma
+    - asymerror: {minus: -0.115634, plus: 0.216077}
+      label: 2 sigma
+    value: 0.249601
+  - errors:
+    - asymerror: {minus: -0.056941, plus: 0.079818}
+      label: 1 sigma
+    - asymerror: {minus: -0.0944, plus: 0.176399}
+      label: 2 sigma
+    value: 0.203767
+  - errors:
+    - asymerror: {minus: -0.046913, plus: 0.065761}
+      label: 1 sigma
+    - asymerror: {minus: -0.0777742, plus: 0.145332}
+      label: 2 sigma
+    value: 0.16788
+  - errors:
+    - asymerror: {minus: -0.03954, plus: 0.055427}
+      label: 1 sigma
+    - asymerror: {minus: -0.0655517, plus: 0.122493}
+      label: 2 sigma
+    value: 0.141497
+  - errors:
+    - asymerror: {minus: -0.0338627, plus: 0.047467}
+      label: 1 sigma
+    - asymerror: {minus: -0.056139, plus: 0.104903}
+      label: 2 sigma
+    value: 0.121179
+  - errors:
+    - asymerror: {minus: -0.0295618, plus: 0.041438}
+      label: 1 sigma
+    - asymerror: {minus: -0.0490085, plus: 0.091578}
+      label: 2 sigma
+    value: 0.105787
+  - errors:
+    - asymerror: {minus: -0.02052, plus: 0.0287636}
+      label: 1 sigma
+    - asymerror: {minus: -0.0340189, plus: 0.0635686}
+      label: 2 sigma
+    value: 0.0734314
+  - errors:
+    - asymerror: {minus: -0.0150128, plus: 0.021044}
+      label: 1 sigma
+    - asymerror: {minus: -0.0248887, plus: 0.0465075}
+      label: 2 sigma
+    value: 0.0537235
+  - errors:
+    - asymerror: {minus: -0.0113973, plus: 0.0159762}
+      label: 1 sigma
+    - asymerror: {minus: -0.0188949, plus: 0.0353076}
+      label: 2 sigma
+    value: 0.0407856
+  - errors:
+    - asymerror: {minus: -0.0089271, plus: 0.0125137}
+      label: 1 sigma
+    - asymerror: {minus: -0.0147998, plus: 0.0276554}
+      label: 2 sigma
+    value: 0.0319461
+  - errors:
+    - asymerror: {minus: -0.0076451, plus: 0.0107165}
+      label: 1 sigma
+    - asymerror: {minus: -0.0126743, plus: 0.0236837}
+      label: 2 sigma
+    value: 0.0273582
+  - errors:
+    - asymerror: {minus: -0.006037, plus: 0.0084622}
+      label: 1 sigma
+    - asymerror: {minus: -0.0100083, plus: 0.0187017}
+      label: 2 sigma
+    value: 0.0216034
+  - errors:
+    - asymerror: {minus: -0.0052317, plus: 0.0073336}
+      label: 1 sigma
+    - asymerror: {minus: -0.0086734, plus: 0.0162073}
+      label: 2 sigma
+    value: 0.0187219
+  - errors:
+    - asymerror: {minus: -0.0042644, plus: 0.0059776}
+      label: 1 sigma
+    - asymerror: {minus: -0.00706967, plus: 0.0132105}
+      label: 2 sigma
+    value: 0.0152602
+  - errors:
+    - asymerror: {minus: -0.00372476, plus: 0.0052211}
+      label: 1 sigma
+    - asymerror: {minus: -0.00617504, plus: 0.0115388}
+      label: 2 sigma
+    value: 0.0133291
+  - errors:
+    - asymerror: {minus: -0.00307947, plus: 0.0043167}
+      label: 1 sigma
+    - asymerror: {minus: -0.00510527, plus: 0.0095399}
+      label: 2 sigma
+    value: 0.01102
+independent_variables:
+- header: {name: Mass, units: GeV}
+  values:
+  - {value: 220}
+  - {value: 240}
+  - {value: 260}
+  - {value: 280}
+  - {value: 300}
+  - {value: 320}
+  - {value: 340}
+  - {value: 360}
+  - {value: 380}
+  - {value: 400}
+  - {value: 420}
+  - {value: 440}
+  - {value: 460}
+  - {value: 480}
+  - {value: 500}
+  - {value: 550}
+  - {value: 600}
+  - {value: 650}
+  - {value: 700}
+  - {value: 750}
+  - {value: 800}
+  - {value: 850}
+  - {value: 900}
+  - {value: 950}
+  - {value: 1000}

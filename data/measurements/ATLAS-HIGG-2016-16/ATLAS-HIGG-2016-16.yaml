@@ -1,0 +1,16 @@
+core:
+    description: "ATLAS Higgs hh -> bbtautau "
+    tag: "ATLAS-HIGG-2016-16"
+    process: "hh -> bbtautau"
+    factor: 1.0
+    relevant_observables:
+        xsec_sushi_ggh_H_NNLO_x_br_H_hh_bbtautau:
+            operation: "data[{new_col}] = data[{old_col}]/data[br_h_bb]"
+    sqrt_s: 13
+    url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/HIGG-2016-16/"
+resonance_search:
+    mass_variable: "mH"
+hepdata:
+    file: "HEPData-ins1684645-v1-Table_3.yaml"
+    unit: fb
+comment: ""

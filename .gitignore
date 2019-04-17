@@ -1,0 +1,8 @@
+*.pyc
+*ipynb_checkpoints*
+*bin/*
+*obj/*
+*lib/*
+scanners/T3PS/MCMC_submission/jobs/
+private/
+config/local.yaml

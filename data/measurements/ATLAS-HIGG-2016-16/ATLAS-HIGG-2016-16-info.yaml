@@ -1,0 +1,5 @@
+description: "ATLAS Higgs hh -> 4b "
+tag: "ATLAS-HIGG-2016-16"
+process: "hh -> 4b "
+factor: 1.0
+relevant_observables: "hh -> bbbb"
