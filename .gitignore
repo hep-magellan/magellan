@@ -7,3 +7,4 @@ scanners/T3PS/MCMC_submission/jobs/
 private/
 config/local.yaml
 dev/
+tmp/
