@@ -19,7 +19,7 @@ m = Measurement(
                observables = {
                                "xsec_sushi_ggh_A_NNLO_x_br_A_Zh":
                                {"upper_limit" : {"function" : None,
-                                                "arguments" : ["mA" , "GammaA_div_mA"]}}
+                                                "arguments" : ["mA" , "GammaA_div_mA", "br_h_bb"]}}
                              },
                CL          = 0.95,
                sqrt_s      = 13.0,
@@ -36,7 +36,8 @@ def limit_vs_mA_GammaA_interpolation_function(vars, limit_type='limit_exp'):
     if isinstance(vars, pd.DataFrame):
         mA = vars.iloc[:,0]
         GammaA_div_mA = vars.iloc[:,1]
-        values = interpolation_function(mA, GammaA_div_mA)/0.5809
+        br_h_bb = vars.iloc[:,2]
+        values = interpolation_function(mA, GammaA_div_mA)/br_h_bb
     else:
         mA = vars[0]
         GammaA_div_mA = vars[1]

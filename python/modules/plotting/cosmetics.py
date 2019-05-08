@@ -156,6 +156,7 @@ var_to_label = {
     'br_H_ZA'                             : r'$\mathcal{B}r(H \rightarrow ZA)$',
     'br_H_AA'                             : r'$\mathcal{B}r(H \rightarrow AA)$',
     'br_H_gaga'                           : r'$\mathcal{B}r(H \rightarrow \gamma \gamma)$',
+    'br_H_hh'                             : r'$\mathcal{B}r(H \rightarrow hh)$',
 	'S'                                   : r'$S$',
 	'T'                                   : r'$T$',
 	'U'                                   : r'$U$',

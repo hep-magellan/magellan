@@ -434,22 +434,29 @@ def scatter_channel_brs(df, xcol, ycol, channels, fig=None, ax=None, scatter_kwa
 
     for ch, opt in channels.items():
 
-        br_min = opt['br_min']
+        br_quantile = opt['br_quantile']
+        br_min = np.quantile(df[ch], br_quantile)
+
         channel_label = var_to_label[ch]
         color = opt['color']
         alpha = opt['alpha']
 
-        legend_label =  '{} > {:.2f}'.format(channel_label, br_min);
+        legend_label =  '{} > {:.2e}'.format(channel_label, br_min);
 
         r = df.query('{} > {}'.format(ch, br_min));
 
         r.plot.scatter(x=xcol, y=ycol, c=color, alpha=alpha, ax=ax, **scatter_kwargs);
 
+#       ax.scatter(r[xcol], r[ycol], s=30.0, alpha=alpha, c=opt['color'],
+#                  **scatter_kwargs)
+        ax.scatter(r[0:1][xcol], r[0:1][ycol], label=legend_label, s=30.0, alpha=1.0, c=opt['color'],
+                   **scatter_kwargs)
+
         x_mean = r[xcol].mean()
         y_mean = r[ycol].mean()
 
-        ax.scatter(x_mean, y_mean, label=legend_label, s=30.0, alpha=1.0, c=opt['color'],
-                   **scatter_kwargs)
+#       ax.scatter(x_mean, y_mean, label=legend_label, s=30.0, alpha=1.0, c=opt['color'],
+#                  **scatter_kwargs)
         
 
     xlabel = var_to_label[xcol]
