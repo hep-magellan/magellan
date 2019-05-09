@@ -65,6 +65,13 @@ def create_interpolation_function_df_auto(df,
                                           independent_variables,
                                           interp_kwargs={}
                                          ):
+    """Creates a 1 or 2d interpolation function from 2 or 3 columns of a pd.DataFrame using
+       scipy.interpolate.interp1/2d.
+       Arguments: - df: pd.DataFrame storing the array of independent and dependent variables.
+                  - dependent_variable: column name of the dependent variable.
+                  - independent_variables:  list containing the column name(s) of the independent variable(s).
+                  - interp_kwargs: keyword arguments in dictionary format passed onto scipy.interpolate.interp1/2d.
+       Returns: The interpolation function"""
 
     nvars = len(independent_variables)
 
@@ -72,6 +79,7 @@ def create_interpolation_function_df_auto(df,
         xcol = independent_variables[0]
         ycol = dependent_variable
         interpolation_function = interp1d(df[xcol], df[ycol], fill_value=np.inf, **interp_kwargs)
+        interpolation_function.bounds_error = False
     elif nvars == 2:
         xcol = independent_variables[0]
         ycol = independent_variables[1]
@@ -94,8 +102,24 @@ def create_interpolation_record_df_auto(df,
                                         independent_variables,
                                         interp_kwargs={},
                                         npts = 100):
+    """Creates a 1 or 2d interpolation function from 2 or 3 columns of a pd.DataFrame using
+       scipy.interpolate.interp1/2d, and interpolates along a regular (npts) grid or (npts)*(npts) flattened
+       grid along the independent variable(s). Returns a dictionary record containing
+       the interpolation function, and the interpolated values along the grid.
+       Input: - df: pd.DataFrame storing the array of independent and dependent variables.
+              - dependent_variable: column name of the dependent variable.
+              - independent_variables:  list containing the column name(s) of the independent variable(s).
+              - interp_kwargs: keyword arguments in dictionary format passed onto scipy.interpolate.interp1/2d.
+              - npts: number of points along the grid.
+       Returns: A dictionary containing the following key value pairs:
+                - 'function': interpolation function.
+                - 'xpts': grid along the independent variable.
+                - 'ypts': grid along the second independent variable (only if len(independent_variables) == 2).
+                - 'zpts': interpolated values.
+                  """
 
     interpolation_function = create_interpolation_function_df_auto(df, dependent_variable, independent_variables, interp_kwargs)
+    interpolation_function.bounds_error = False
     interpolation = {}
     interpolation["function"] = interpolation_function
 
@@ -123,7 +147,7 @@ def create_interpolation_record_df_auto(df,
         interpolation['ypts'] = ypts
         interpolation['zpts'] = zpts
     elif nvars > 2:
-        raise Exception('Number of independent variables more than 2! Can only handle 1 or 2 dimensionsal intepolation')
+        raise Exception('Number of independent variables more than 2! Can only handle 1 or 2 dimensionsal intepolation.')
     else:
         raise Exception('Indepdent variables list is empty!')
 

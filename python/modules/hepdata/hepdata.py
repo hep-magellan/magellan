@@ -12,12 +12,17 @@ from scipy.interpolate import interp1d
 from scipy.interpolate import interp2d
 
 
-def limit_yaml_to_df_1d(input_file_path, independent_variable):
+def limit_yaml_to_df_1d(input_file_path, independent_variables):
+
 
     with open(input_file_path, "r") as input_file:
     
         contents = yaml.load(input_file)
-        indep_pts     = [ m['value'] for m in contents['independent_variables'][0]['values']]
+        
+        indep_pts_list = []
+        for i, var in enumerate(independent_variables):
+            indep_pts_list.append([ m['value'] for m in contents['independent_variables'][0]['values']])
+
         limit_obs     = [ l['value'] for l in contents['dependent_variables'][0]['values']]
         limit_exp     = [ l['value'] for l in contents['dependent_variables'][1]['values']]
         limit_exp_m2s = [ l['errors'][1]['asymerror']['minus'] for l in contents['dependent_variables'][1]['values']]
@@ -27,14 +32,17 @@ def limit_yaml_to_df_1d(input_file_path, independent_variable):
     
     
         measurement_database = collections.OrderedDict({
-                             independent_variable  : masspts,
-                             "limit_exp"           : limit_exp,
-                             "limit_exp_m2s"       : limit_exp_m2s,
-                             "limit_exp_m1s"       : limit_exp_m1s,
-                             "limit_exp_p1s"       : limit_exp_p1s,
-                             "limit_exp_p2s"       : limit_exp_p2s,
-                             "limit_obs"           : limit_obs,
-                            })
+                                                         "limit_exp"             : limit_exp,
+                                                         "limit_exp_m2s"         : limit_exp_m2s,
+                                                         "limit_exp_m1s"         : limit_exp_m1s,
+                                                         "limit_exp_p1s"         : limit_exp_p1s,
+                                                         "limit_exp_p2s"         : limit_exp_p2s,
+                                                         "limit_obs"             : limit_obs
+                                                        })
+
+
+        for var, pts in zip(independent_variables, indep_pts_list):
+            measurement_database[var] = pts
     
         df = pd.DataFrame(measurement_database)
 

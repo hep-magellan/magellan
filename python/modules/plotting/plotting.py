@@ -131,11 +131,11 @@ def scatter_alignment_wrong_sign(df, xcol, ycol,
 #########################
 
 def exclusion_from_analysis(df, measurement, window_axes, observable='first',
-        limit_type='limit_exp', scale=1.0, ncols=3, scatter_kwargs={'rasterized':True},
+        limit_type='limit_exp', limit_scaling_factor=1.0, ncols=3, scatter_kwargs={'rasterized':True},
         plot_order='excl_nonexcl'):
 
     print("exclusion_from_analysis() started")
-    print("scale: {}".format(scale))
+    print("limit_scaling_factor: {}".format(limit_scaling_factor))
 
     nwindows = len(window_axes)
     nrows = int(nwindows/ncols + 0.5)
@@ -148,7 +148,8 @@ def exclusion_from_analysis(df, measurement, window_axes, observable='first',
 
     all_pts = df
     print("Determining excluded points.")
-    idx_excl_pts     = measurement.get_idx_of_excluded_pts(df, observable=observable, limit_type=limit_type, scale=scale)
+    idx_excl_pts     = measurement.get_idx_of_excluded_pts(df, observable=observable,
+            limit_type=limit_type, limit_scaling_factor=limit_scaling_factor)
     idx_not_excl_pts = ~idx_excl_pts
     excl_pts     = df[idx_excl_pts]
     not_excl_pts = df[idx_not_excl_pts]
@@ -197,8 +198,8 @@ def exclusion_from_analysis(df, measurement, window_axes, observable='first',
         yi = measurement.observables[observable]["upper_limit"]['function'](xi, limit_type)
 
         label_limit_curve = "{} {}".format(measurement['label'], var_to_label[limit_type])
-        if scale != 1.0:
-            label_limit_curve += " scaled".format(scale)
+        if limit_scaling_factor != 1.0:
+            label_limit_curve += " scaled".format(limit_scaling_factor)
         ax[0].plot(xi, scale*yi, linestyle='--', c='k', label=label_limit_curve)
         print("Limit curve finished")
 
@@ -211,13 +212,14 @@ def exclusion_from_analysis(df, measurement, window_axes, observable='first',
 def exclusion_from_analysis_projection(df, window_axes, measurement, observable='first',
         plot_order='excl_nonexcl', lumiscale=1.0, ncols=3):
 
-    scale = 1.0/np.sqrt(lumiscale)
+    limit_scaling_factor = 1.0/np.sqrt(lumiscale)
     
     if observable == 'first':
         observable = list(measurement.observables.keys())[0]
     
     fig, ax = exclusion_from_analysis(df, measurement=measurement,
-            window_axes=window_axes, observable=observable, plot_order=plot_order, scale=scale, ncols=ncols)
+            window_axes=window_axes, observable=observable, plot_order=plot_order,
+            limit_scaling_factor=limit_scaling_factor, ncols=ncols)
 
     print("Finished with exclusion_from_analysis() function.")
     
@@ -230,7 +232,7 @@ def exclusion_from_analysis_projection(df, window_axes, measurement, observable=
     title += r"= {:.1f} fb$^{{-1}}$, ".format(measurement['luminosity'])
     title += r"$\mathcal{L}_{\mathrm{int}}^{\mathrm{future}}=$"
     title += " {:.1f} fb$^{{-1}}$".format(measurement['luminosity']*lumiscale)
-    title += " (limit scaled by {:.2f})".format(scale)
+    title += " (limit scaled by {:.2f})".format(limit_scaling_factor)
     fig.suptitle(title)
     plt.subplots_adjust(top=0.90)
     

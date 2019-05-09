@@ -1,0 +1,108 @@
+independent_variables:
+- header: {name: 'Mass', units: GeV}
+  values:
+  - {value: 200.000000}
+  - {value: 250.000000}
+  - {value: 300.000000}
+  - {value: 350.000000}
+  - {value: 400.000000}
+  - {value: 500.000000}
+  - {value: 600.000000}
+  - {value: 700.000000}
+  - {value: 800.000000}
+  - {value: 1000.000000}
+  - {value: 1200.000000}
+  - {value: 1500.000000}
+  - {value: 1750.000000}
+  - {value: 2000.000000}
+  - {value: 2250.000000}
+dependent_variables:
+- header: {name: '$\sigma \times B$', units: pb}
+  qualifiers:
+  - {name: SQRT(S), units: GeV, value: 13000}
+  - {name: LUMINOSITY, units: 'fb$^{-1}$', value: 36.1}
+  - {name: Production, value: 'Higgs boson (gluon-gluon fusion)'}
+  - {name: Limit, value: Observed}
+  values:
+  - {value: 0.780760}
+  - {value: 0.248610}
+  - {value: 0.167830}
+  - {value: 0.200350}
+  - {value: 0.151420}
+  - {value: 0.079790}
+  - {value: 0.052610}
+  - {value: 0.026900}
+  - {value: 0.014790}
+  - {value: 0.009630}
+  - {value: 0.007350}
+  - {value: 0.005800}
+  - {value: 0.005830}
+  - {value: 0.006070}
+  - {value: 0.006580}
+- header: {name: '$\sigma \times B$', units: pb}
+  qualifiers:
+  - {name: SQRT(S), units: GeV, value: 13000}
+  - {name: LUMINOSITY, units: 'fb$^{-1}$', value: 36.1}
+  - {name: Production, value: 'Higgs boson (gluon-gluon fusion)'}
+  - {name: Limit, value: Expected}
+  values:
+  - value: 0.902170
+    errors: 
+    - {asymerror: {plus: 0.3515, minus: -0.2521}, label: '1 sigma'}
+    - {asymerror: {plus: 0.7849, minus: -0.418}, label: '2 sigma'}
+  - value: 0.451230
+    errors: 
+    - {asymerror: {plus: 0.1856, minus: -0.1261}, label: '1 sigma'}
+    - {asymerror: {plus: 0.4224, minus: -0.209}, label: '2 sigma'}
+  - value: 0.246020
+    errors: 
+    - {asymerror: {plus: 0.1017, minus: -0.06875}, label: '1 sigma'}
+    - {asymerror: {plus: 0.2311, minus: -0.114}, label: '2 sigma'}
+  - value: 0.158540
+    errors: 
+    - {asymerror: {plus: 0.0671, minus: -0.0443}, label: '1 sigma'}
+    - {asymerror: {plus: 0.1537, minus: -0.07345}, label: '2 sigma'}
+  - value: 0.096020
+    errors: 
+    - {asymerror: {plus: 0.04003, minus: -0.02683}, label: '1 sigma'}
+    - {asymerror: {plus: 0.09095, minus: -0.04448}, label: '2 sigma'}
+  - value: 0.052750
+    errors: 
+    - {asymerror: {plus: 0.02336, minus: -0.01474}, label: '1 sigma'}
+    - {asymerror: {plus: 0.05412, minus: -0.02444}, label: '2 sigma'}
+  - value: 0.034850
+    errors: 
+    - {asymerror: {plus: 0.01592, minus: -0.00974}, label: '1 sigma'}
+    - {asymerror: {plus: 0.03734, minus: -0.01615}, label: '2 sigma'}
+  - value: 0.022990
+    errors: 
+    - {asymerror: {plus: 0.01064, minus: -0.00642}, label: '1 sigma'}
+    - {asymerror: {plus: 0.02519, minus: -0.01065}, label: '2 sigma'}
+  - value: 0.015550
+    errors: 
+    - {asymerror: {plus: 0.0072, minus: -0.00435}, label: '1 sigma'}
+    - {asymerror: {plus: 0.01713, minus: -0.0072}, label: '2 sigma'}
+  - value: 0.010780
+    errors: 
+    - {asymerror: {plus: 0.00509, minus: -0.00301}, label: '1 sigma'}
+    - {asymerror: {plus: 0.0122, minus: -0.00499}, label: '2 sigma'}
+  - value: 0.007610
+    errors: 
+    - {asymerror: {plus: 0.00368, minus: -0.00213}, label: '1 sigma'}
+    - {asymerror: {plus: 0.00898, minus: -0.00352}, label: '2 sigma'}
+  - value: 0.005830
+    errors: 
+    - {asymerror: {plus: 0.00288, minus: -0.00163}, label: '1 sigma'}
+    - {asymerror: {plus: 0.00714, minus: -0.0027}, label: '2 sigma'}
+  - value: 0.005660
+    errors: 
+    - {asymerror: {plus: 0.00281, minus: -0.00159}, label: '1 sigma'}
+    - {asymerror: {plus: 0.00704, minus: -0.00262}, label: '2 sigma'}
+  - value: 0.005860
+    errors: 
+    - {asymerror: {plus: 0.00296, minus: -0.00164}, label: '1 sigma'}
+    - {asymerror: {plus: 0.00746, minus: -0.00271}, label: '2 sigma'}
+  - value: 0.006350
+    errors: 
+    - {asymerror: {plus: 0.00326, minus: -0.00178}, label: '1 sigma'}
+    - {asymerror: {plus: 0.0083, minus: -0.00294}, label: '2 sigma'}

@@ -16,6 +16,7 @@ import interpolation.interpolation as interputils
 
 
 class MeasurementBase:
+    """Measurement base class."""
 
     def __init__(self,
                  data   = {},
@@ -46,7 +47,8 @@ class MeasurementBase:
         self.container['url']         = url
 
 
-    def get_idx_of_excluded_pts(self, df, observable='first', limit_type='expected', scale=1.0):
+    def get_idx_of_excluded_pts(self, df, observable='first', limit_type='limit_exp',
+            limit_scaling_factor=1.0):
 
         if observable == 'first':
             observable = list(self.observables.keys())[0]
@@ -54,19 +56,21 @@ class MeasurementBase:
         observable_limit_function  = self.observables[observable]["upper_limit"]["function"]
         observable_limit_arguments = self.observables[observable]["upper_limit"]["arguments"]
         limit_value      = observable_limit_function(df[observable_limit_arguments], limit_type)
-        idx_excluded_pts = df[observable] > limit_value * scale
+        idx_excluded_pts = df[observable] > limit_value * limit_scaling_factor
 
         return idx_excluded_pts
 
-    def get_excluded_pts(self, df, observable='first',  limit_type='limit_exp', scale=1.0):
+
+    def get_excluded_pts(self, df, observable='first',  limit_type='limit_exp', limit_scaling_factor=1.0):
 
         if observable == 'first':
             observable = list(self.observables.keys())[0]
 
-        idxs = self.get_idx_of_excluded_pts(df, observable, limit_type, scale)
+        idxs = self.get_idx_of_excluded_pts(df, observable, limit_type, limit_scaling_factor)
         dfr  = df[idxs]
 
         return dfr
+
 
     def add_excluded_pts_as_col(self, df, observable='first', limit_type='limit_exp'):
 
@@ -76,6 +80,7 @@ class MeasurementBase:
         new_col = "{}_{}_{}".format(observable, self.tag, limit_type)
         col_name_excl_bool = new_col + '_excl'
         df[newcol] = np.where(idx,  True, False )
+
 
     # - class variabales
     def __getitem__(self, key):
@@ -129,7 +134,7 @@ class Measurement(MeasurementBase):
 
     def plot_excluded_pts(self, df, observable='first', limit_type='limit_exp',
                           xcol='first_arg', ycol='first_observable',
-                          ax=None, scatter_kwargs_common={}, scale=1.0, excluded_color='firebrick',
+                          ax=None, scatter_kwargs_common={}, limit_scaling_factor=1.0, excluded_color='firebrick',
                           show_interpolated_pts=True):
 
         if observable == 'first':
@@ -141,7 +146,7 @@ class Measurement(MeasurementBase):
             fig = None
 
         excluded_pts = self.get_excluded_pts(df, observable=observable, limit_type=limit_type,
-                scale=scale)
+                limit_scaling_factor=limit_scaling_factor)
 
         if xcol == 'first_arg':
             xcol = self.observables[observable]["upper_limit"]["arguments"][0]
@@ -167,6 +172,7 @@ class Measurement(MeasurementBase):
     
         return fig, ax
 
+
 ######################################################################################
 
 class UpperLimitData:
@@ -189,6 +195,18 @@ class UpperLimitData:
                       ):
 
         measurement_data = pd.read_csv(input_datafile_path, delim_whitespace=True)
+        
+        return cls(independent_variables=independent_variables,
+                   measurement_data=measurement_data
+                  )
+
+    @classmethod
+    def from_hepdatafile(cls,
+                      input_hepdatafile_path,
+                      independent_variables=[],
+                      ):
+
+        measurement_data = hepdata.limit_yaml_to_df_1d(input_hepdatafile_path, independent_variables)
         
         return cls(independent_variables=independent_variables,
                    measurement_data=measurement_data
