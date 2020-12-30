@@ -1,0 +1,4 @@
+paths:
+  default_dataset: "path-to-the-default-dataset"
+  figures: "figure-output-directory"
+
